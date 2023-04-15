@@ -8,8 +8,6 @@ import lombok.Getter;
 @Getter
 @EqualsAndHashCode(callSuper = false)
 public class ServiceClient extends Employee {
-	private PercentageSalaryEnum percentSalary;
-
 	public ServiceClient() {
 		this.percentSalary = PercentageSalaryEnum.SERVICE_CLIENT;
 	}
@@ -19,4 +17,8 @@ public class ServiceClient extends Employee {
 		return salary.calculatePromotionAvailable(getPercentSalary());
 	}
 
+	public Boolean isServiceClient() {
+		return Boolean.TRUE;
+	}
+	
 }

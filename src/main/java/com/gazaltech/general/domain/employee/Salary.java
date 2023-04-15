@@ -49,12 +49,12 @@ public class Salary {
 	    LocalDate now = LocalDate.now();
 
 	    // Calculate difference dates
-	    long diffYears = ChronoUnit.MONTHS.between(now, getLastChange());
+	    long diffMonths = ChronoUnit.MONTHS.between(now, getLastChange());
 
     	this.isPromotionAvailaible = Boolean.FALSE;
     	
 	    // Validate difference
-	    if (diffYears > 5) {
+	    if (diffMonths > 5) {
 	    	this.isPromotionAvailaible = Boolean.TRUE;
 	    }
 	    

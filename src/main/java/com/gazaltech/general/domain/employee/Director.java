@@ -8,8 +8,6 @@ import lombok.Getter;
 @Getter
 @EqualsAndHashCode(callSuper = false)
 public class Director extends Employee {
-	private PercentageSalaryEnum percentSalary;
-
 	public Director() {
 		this.percentSalary = PercentageSalaryEnum.DIRECTOR;
 	}
@@ -18,4 +16,9 @@ public class Director extends Employee {
 	public BigDecimal calculateSalary(Salary salary) {
 		return salary.calculatePromotionAvailable(getPercentSalary());
 	}
+
+	public Boolean isDirector() {
+		return Boolean.TRUE;
+	}
+	
 }
