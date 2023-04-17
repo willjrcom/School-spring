@@ -9,7 +9,7 @@ import lombok.Getter;
 @EqualsAndHashCode(callSuper = false)
 public class Director extends Employee {
 	public Director() {
-		this.percentSalary = PercentageSalaryEnum.DIRECTOR;
+		this.percentSalary = EmployeeTypeEnum.DIRECTOR;
 	}
 	
 	@Override

@@ -9,7 +9,7 @@ import lombok.Getter;
 @EqualsAndHashCode(callSuper = false)
 public class ServiceClient extends Employee {
 	public ServiceClient() {
-		this.percentSalary = PercentageSalaryEnum.SERVICE_CLIENT;
+		this.percentSalary = EmployeeTypeEnum.SERVICE_CLIENT;
 	}
 	
 	@Override

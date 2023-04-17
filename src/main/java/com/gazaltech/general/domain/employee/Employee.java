@@ -9,7 +9,7 @@ import lombok.Getter;
 @Getter
 public abstract class Employee extends PersonalData {
 	protected Salary salary;
-	protected PercentageSalaryEnum percentSalary;
+	protected EmployeeTypeEnum percentSalary;
 	
 	public abstract BigDecimal calculateSalary(Salary salary);
 	

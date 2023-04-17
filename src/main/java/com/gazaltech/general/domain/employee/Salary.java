@@ -1,15 +1,10 @@
 package com.gazaltech.general.domain.employee;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.time.Instant;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-
-import org.bson.BsonDateTime;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -61,15 +56,16 @@ public class Salary {
 	    return getIsPromotionAvailaible();
 	}
 	
-	public BigDecimal calculatePromotionAvailable(PercentageSalaryEnum percentSalaryEmployee) {
+	public BigDecimal calculatePromotionAvailable(EmployeeTypeEnum percentSalaryEmployee) {
 		if (!getIsPromotionAvailaible()) {
 			return BigDecimal.ZERO;
 		}
-		BigDecimal maxPercentage = new BigDecimal(percentSalaryEmployee.getMaxPercentage());
+		BigDecimal maxPercentage = new BigDecimal(percentSalaryEmployee.getMaxPercentageSalary());
 		this.availableSalary = getCurrentSalary().multiply(maxPercentage).divide(new BigDecimal("100")); 
 		return getAvailableSalary();
 	}
-	
+
+	@SuppressWarnings("unused")
 	private void approvePromotionAvailable() {
 		if (!getIsPromotionAvailaible() && getAvailableSalary().equals(BigDecimal.ZERO)) {
 			return;

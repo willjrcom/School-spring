@@ -14,7 +14,7 @@ public class Teacher extends Employee {
 	private List<RoomClass> roomClass;
 	
 	public Teacher() {
-		this.percentSalary = PercentageSalaryEnum.TEACHER;
+		this.percentSalary = EmployeeTypeEnum.TEACHER;
 	}
 	
 	@Override
