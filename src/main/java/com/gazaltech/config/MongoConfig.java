@@ -11,7 +11,7 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 
 @Configuration
-@EnableMongoRepositories(basePackages = "com.gazaltech.school.infra.repositorys")
+@EnableMongoRepositories(basePackages = "com.gazaltech.core.infra.repositorys")
 public class MongoConfig extends AbstractMongoClientConfiguration {
 	@Value("${spring.data.mongodb.uri}")
     private String uri;
