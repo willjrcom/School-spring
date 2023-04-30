@@ -1,14 +1,16 @@
 package com.gazaltech.core.infra.repositorys;
 
-import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
 
 import com.gazaltech.core.domain.student.Student;
 import com.gazaltech.shared.domain.Cpf;
 
+import reactor.core.publisher.Mono;
+
 @Repository
-public interface StudentRepositoryMongo extends MongoRepository<Student, String> {
-	Student findByCpf(Cpf cpf);
-	Student findByRa(Long ra);
-	Student findByEmail(String email);
+public interface StudentRepositoryMongo extends ReactiveMongoRepository<Student, String> {
+	public Mono<Student> findByCpf(Cpf cpf);
+	public Mono<Student> findByRa(Long ra);
+	public Mono<Student> findByEmail(String email);
 }

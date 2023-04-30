@@ -8,7 +8,6 @@ import com.gazaltech.core.domain.room.RoomClass;
 
 import lombok.Getter;
 
-@SuppressWarnings("unused")
 @Getter
 public class School {
 	private String name;
