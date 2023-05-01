@@ -6,8 +6,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
 
-import com.gazaltech.core.application.student.StudentService;
 import com.gazaltech.core.domain.student.Student;
+import com.gazaltech.core.usecases.student.StudentService;
 import com.gazaltech.shared.domain.Cpf;
 
 import reactor.core.publisher.Mono;

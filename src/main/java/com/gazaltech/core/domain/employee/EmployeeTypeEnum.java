@@ -6,6 +6,7 @@ import lombok.Getter;
 public enum EmployeeTypeEnum {
 	SERVICE_CLIENT (5.0),
 	TEACHER (10.0),
+	COORDINATOR (12.0),
 	DIRECTOR (15.0);
 
 	private final double maxPercentageSalary;

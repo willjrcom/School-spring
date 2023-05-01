@@ -1,4 +1,4 @@
-package com.gazaltech.core.domain.room;
+package com.gazaltech.core.domain.classroom;
 
 import java.util.List;
 
@@ -8,13 +8,13 @@ import com.gazaltech.core.domain.student.Student;
 import lombok.Getter;
 
 @Getter
-public class RoomClass {
+public class ClassRoom {
 	private String nameRoom;
-	private DiciplineRoom diciplineRoom;
+	private DiciplineClassRoom diciplineRoom;
 	private List<Student> students;
 	private List<Teacher> teachers;
 	
-	public RoomClass(String nameRoom, DiciplineRoom diciplineRoom, Teacher teacher) {
+	public ClassRoom(String nameRoom, DiciplineClassRoom diciplineRoom, Teacher teacher) {
 		this.nameRoom = nameRoom;
 		this.diciplineRoom = diciplineRoom;
 		this.teachers.add(teacher);

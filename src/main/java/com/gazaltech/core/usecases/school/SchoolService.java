@@ -1,11 +1,12 @@
-package com.gazaltech.core.domain.school;
+package com.gazaltech.core.usecases.school;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.gazaltech.core.domain.classroom.ClassRoom;
 import com.gazaltech.core.domain.employee.Employee;
 import com.gazaltech.core.domain.employee.EmployeeTypeEnum;
-import com.gazaltech.core.domain.room.RoomClass;
+import com.gazaltech.core.domain.school.School;
 
 @SuppressWarnings("unused")
 public class SchoolService {
@@ -27,7 +28,7 @@ public class SchoolService {
 		return school.getEmployees().remove(employee);
 	}
 
-	private Boolean addRoomClass(School school, RoomClass roomClass) {
+	private Boolean addRoomClass(School school, ClassRoom roomClass) {
 		if (school.getEmployees().size() > 40) {
 			return Boolean.FALSE;
 		}
@@ -35,7 +36,7 @@ public class SchoolService {
 		return school.getRoomClasses().add(roomClass);
 	}
 
-	private Boolean removeRoomClass(School school, RoomClass roomClass) {
+	private Boolean removeRoomClass(School school, ClassRoom roomClass) {
 		return school.getRoomClasses().remove(roomClass);
 	}
 }

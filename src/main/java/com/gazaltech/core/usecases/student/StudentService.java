@@ -1,4 +1,4 @@
-package com.gazaltech.core.application.student;
+package com.gazaltech.core.usecases.student;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

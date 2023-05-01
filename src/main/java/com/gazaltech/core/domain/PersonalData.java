@@ -15,7 +15,6 @@ import lombok.Data;
 @Validated
 @Document(collection = "personalData")
 public class PersonalData {
-
 	private ObjectId id;
 	private Cpf cpf;
 	

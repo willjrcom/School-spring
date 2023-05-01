@@ -12,17 +12,20 @@ public abstract class Employee extends PersonalData {
 	protected EmployeeTypeEnum percentSalary;
 	
 	public abstract BigDecimal calculateSalary(Salary salary);
-	
-	public Boolean isTeacher() {
+
+	public Boolean isDirector() {
 		return Boolean.FALSE;
 	}
 
-	public Boolean isDirector() {
+	public Boolean isCoordinator() {
+		return Boolean.FALSE;
+	}
+	
+	public Boolean isTeacher() {
 		return Boolean.FALSE;
 	}
 
 	public Boolean isServiceClient() {
 		return Boolean.FALSE;
 	}
-	
 }
