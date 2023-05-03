@@ -4,12 +4,11 @@ spring:
       uri: mongodb+srv://root:toor@testdb.cpxr8qa.mongodb.net/?retryWrites=true&w=majority
       database: devDB
       authentication-database: devDB
-
-      #uri: mongodb://localhost:27017/admin
-      #database: schoolDB
+      
   mvc:
     pathmatch:
       matching-strategy: ant-path-matcher
+      
   jpa:
     show-sql: true
     

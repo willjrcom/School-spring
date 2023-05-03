@@ -6,11 +6,9 @@ import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 @Getter
-@EqualsAndHashCode
 public class Salary {
 	private BigDecimal currentSalary;
 	private BigDecimal availableSalary;
@@ -19,7 +17,6 @@ public class Salary {
 	private Boolean isPromotionAvailaible;
 	
 	public Salary() {
-		super();
 		this.currentSalary = BigDecimal.ZERO;
 		this.availableSalary = BigDecimal.ZERO;
 		this.isPromotionAvailaible = Boolean.FALSE;

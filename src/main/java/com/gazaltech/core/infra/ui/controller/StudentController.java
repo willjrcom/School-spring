@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.gazaltech.core.domain.student.Student;
-import com.gazaltech.core.usecases.student.StudentService;
+import com.gazaltech.core.usecases.student.StudentServiceImpl;
 import com.gazaltech.shared.domain.Cpf;
 
 import jakarta.validation.Valid;
@@ -21,7 +21,7 @@ import reactor.core.publisher.Mono;
 public class StudentController {
 	
 	@Autowired
-	private StudentService studentService;
+	private StudentServiceImpl studentService;
 	
 	@GetMapping
 	public Mono<Student> findByCpf(@Valid Cpf cpf) {

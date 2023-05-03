@@ -20,4 +20,17 @@ public class Coordinator extends Employee {
 	public Boolean isCoordinator() {
 		return Boolean.TRUE;
 	}
+	
+	public static class CoordinatorBuilder {
+		private Coordinator coordinator;
+		
+		public CoordinatorBuilder() {
+			this.coordinator = new Coordinator();
+		}
+		
+		public CoordinatorBuilder name(String name) {
+			this.coordinator.name = name;
+			return this;
+		}
+	}
 }

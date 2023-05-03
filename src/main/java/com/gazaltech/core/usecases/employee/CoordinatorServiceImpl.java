@@ -9,7 +9,6 @@ public class CoordinatorServiceImpl implements CoordinatorService {
 
 	@Override
 	public Boolean ApproveStudentRemoval(Student student) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

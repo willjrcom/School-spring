@@ -3,8 +3,6 @@ package com.gazaltech.core.infra.ui.controller;
 import static org.springframework.web.reactive.function.server.RequestPredicates.GET;
 import static org.springframework.web.reactive.function.server.RequestPredicates.accept;
 
-import org.springdoc.core.annotations.RouterOperation;
-import org.springdoc.core.annotations.RouterOperations;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
@@ -17,9 +15,6 @@ import jakarta.validation.Valid;
 @Configuration
 public class StudentRouter {
 	  @Bean
-	  @RouterOperations({
-		  @RouterOperation(path = "/cpf/{cpf}")
-	  })
 	  public RouterFunction<ServerResponse> route(@Valid StudentHandler handler) {
 	    return RouterFunctions
 	        .route(GET("/cpf/{cpf}").and(accept(MediaType.APPLICATION_JSON)), handler::findByCpf)

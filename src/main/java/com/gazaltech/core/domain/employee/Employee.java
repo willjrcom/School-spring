@@ -2,11 +2,14 @@ package com.gazaltech.core.domain.employee;
 
 import java.math.BigDecimal;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import com.gazaltech.core.domain.PersonalData;
 
 import lombok.Getter;
 
 @Getter
+@Document(collection = "EmployeeCollection")
 public abstract class Employee extends PersonalData {
 	protected Salary salary;
 	protected EmployeeTypeEnum percentSalary;

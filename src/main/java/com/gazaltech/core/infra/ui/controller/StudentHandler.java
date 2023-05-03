@@ -7,7 +7,7 @@ import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
 
 import com.gazaltech.core.domain.student.Student;
-import com.gazaltech.core.usecases.student.StudentService;
+import com.gazaltech.core.usecases.student.StudentServiceImpl;
 import com.gazaltech.shared.domain.Cpf;
 
 import reactor.core.publisher.Mono;
@@ -15,7 +15,7 @@ import reactor.core.publisher.Mono;
 @Component
 public class StudentHandler {
 	@Autowired
-	private StudentService studentService;
+	private StudentServiceImpl studentService;
 
 	public Mono<ServerResponse> findByCpf(ServerRequest request) {
 		request.pathVariables().values().stream().forEach(System.out::println);
