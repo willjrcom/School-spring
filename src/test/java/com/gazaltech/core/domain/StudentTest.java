@@ -17,9 +17,9 @@ public class StudentTest {
     @Test
     void testStudentIsValid() {
     	Student student = new Student.StudentBuilder("123456")
-    			.cpf("436.377.998-55")
-    			.name("William Junior")
-    			.email("willl@gmail.com")
+    			.withCpf("436.377.998-55")
+    			.withName("William Junior")
+    			.withEmail("willl@gmail.com")
     			.build();
 
         ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
@@ -33,9 +33,9 @@ public class StudentTest {
     @Test
     void testRaIsNull() {
     	Student student = new Student.StudentBuilder("")
-    			.cpf("436.377.998-55")
-    			.name("William Junior")
-    			.email("willl@gmail.com")
+    			.withCpf("436.377.998-55")
+    			.withName("William Junior")
+    			.withEmail("willl@gmail.com")
     			.build();
 
         ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
@@ -49,9 +49,9 @@ public class StudentTest {
     @Test
     void testRaIsBlank() {
     	Student student = new Student.StudentBuilder("      ")
-    			.cpf("436.377.998-55")
-    			.name("William Junior")
-    			.email("willl@gmail.com")
+    			.withCpf("436.377.998-55")
+    			.withName("William Junior")
+    			.withEmail("willl@gmail.com")
     			.build();
 
         ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
@@ -65,9 +65,9 @@ public class StudentTest {
     @Test
     void testEmailIsInvalid() {
     	Student student = new Student.StudentBuilder("123456")
-    			.cpf("436")
-    			.name("William Junior")
-    			.email("willlgmail.com")
+    			.withCpf("436")
+    			.withName("William Junior")
+    			.withEmail("willlgmail.com")
     			.build();
 
         ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();

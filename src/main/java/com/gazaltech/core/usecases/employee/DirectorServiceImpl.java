@@ -4,6 +4,8 @@ import com.gazaltech.core.domain.employee.Employee;
 import com.gazaltech.core.domain.employee.EmployeeTypeEnum;
 import com.gazaltech.core.domain.student.Student;
 
+import reactor.core.publisher.Mono;
+
 public class DirectorServiceImpl implements DirectorService {
 
 	@Override
@@ -19,7 +21,7 @@ public class DirectorServiceImpl implements DirectorService {
 	}
 
 	@Override
-	public Employee changePosition(Employee employee, EmployeeTypeEnum newEmployeeType) {
+	public Mono<Employee> changePosition(Employee employee, EmployeeTypeEnum newEmployeeType) {
 		// TODO Auto-generated method stub
 		return null;
 	}

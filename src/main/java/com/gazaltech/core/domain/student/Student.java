@@ -27,27 +27,27 @@ public class Student extends PersonalData {
 			this.student.ra = ra;
 		}
 
-		public StudentBuilder cpf(Cpf cpf) {
+		public StudentBuilder withCpf(Cpf cpf) {
 			this.student.cpf = cpf;
 			return this;
 		}
 
-		public StudentBuilder cpf(String cpf) {
+		public StudentBuilder withCpf(String cpf) {
 			this.student.cpf = new Cpf(cpf);
 			return this;
 		}
 		
-		public StudentBuilder name(String name) {
+		public StudentBuilder withName(String name) {
 			this.student.name = name;
 			return this;
 		}
 		
-		public StudentBuilder email(String email) {
+		public StudentBuilder withEmail(String email) {
 			this.student.email = email;
 			return this;
 		}
 		
-		public StudentBuilder dateBirth(BsonDateTime dateBirth) {
+		public StudentBuilder withDateBirth(BsonDateTime dateBirth) {
 			this.student.dateBirth = dateBirth;
 			return this;
 		}

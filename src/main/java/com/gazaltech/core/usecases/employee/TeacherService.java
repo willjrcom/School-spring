@@ -3,9 +3,7 @@ package com.gazaltech.core.usecases.employee;
 import com.gazaltech.core.domain.student.Student;
 
 public interface TeacherService {
-	public void fixTest();
 	public void fixTask();
-	public void sendTest();
 	public void sendTask();
 	public Boolean approveStudent(Student student);
 	public Boolean repproveStudent(Student student);

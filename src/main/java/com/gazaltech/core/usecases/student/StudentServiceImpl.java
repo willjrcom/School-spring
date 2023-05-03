@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.gazaltech.core.domain.student.Student;
-import com.gazaltech.core.domain.test.Test;
+import com.gazaltech.core.domain.task.Task;
 import com.gazaltech.core.infra.repositorys.StudentRepositoryMongo;
 import com.gazaltech.shared.domain.Cpf;
 
@@ -17,13 +17,13 @@ public class StudentServiceImpl implements StudentService {
 	private StudentRepositoryMongo studentRepository;
 
 	@Override
-	public void StartTest(Test test) {
+	public void StartTask(Task task) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void finishTest(Test test) {
+	public void finishTask(Task task) {
 		// TODO Auto-generated method stub
 		
 	}

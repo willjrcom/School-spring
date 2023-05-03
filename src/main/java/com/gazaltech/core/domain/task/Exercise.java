@@ -1,4 +1,4 @@
-package com.gazaltech.core.domain.test;
+package com.gazaltech.core.domain.task;
 
 import java.sql.Blob;
 import java.util.List;

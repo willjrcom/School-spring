@@ -1,4 +1,4 @@
-package com.gazaltech.core.domain.test;
+package com.gazaltech.core.domain.task;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -13,7 +13,7 @@ import lombok.Getter;
 
 @Getter
 @Document(collection = "TestCollection")
-public class Test {
+public class Task {
 	private ObjectId id;
 	private Date startDate;
 	private Date finishDate;

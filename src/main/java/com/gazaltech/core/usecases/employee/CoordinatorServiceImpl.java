@@ -5,6 +5,8 @@ import com.gazaltech.core.domain.employee.Teacher;
 import com.gazaltech.core.domain.student.ReasonSuspensionEnum;
 import com.gazaltech.core.domain.student.Student;
 
+import reactor.core.publisher.Mono;
+
 public class CoordinatorServiceImpl implements CoordinatorService {
 
 	@Override
@@ -37,7 +39,7 @@ public class CoordinatorServiceImpl implements CoordinatorService {
 	}
 
 	@Override
-	public ClassRoom createClassRoom(Teacher teacher) {
+	public Mono<ClassRoom> createClassRoom(Teacher teacher) {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -13,10 +13,47 @@ public class School {
 	private String name;
 	private Address address;
 	private List<Employee> employees;
-	private List<ClassRoom> roomClasses;
+	private List<ClassRoom> classRooms;
 
-	public School(String name, Address address) {
-		this.name = name;
-		this.address = address;
+	public static class SchoolBuilder {
+		private School school;
+		
+		public SchoolBuilder() {
+			this.school = new School();
+		}
+		
+		public SchoolBuilder withName(String name) {
+			this.school.name = name;
+			return this;
+		}
+
+		public SchoolBuilder withAdress(Address address) {
+			this.school.address = address;
+			return this;
+		}
+
+		public SchoolBuilder withEmployee(Employee employee) {
+			this.school.employees.add(employee);
+			return this;
+		}
+
+		public SchoolBuilder withAllEmployees(List<Employee> employees) {
+			this.school.employees = employees;
+			return this;
+		}
+
+		public SchoolBuilder withClassRoom(ClassRoom classRoom) {
+			this.school.classRooms.add(classRoom);
+			return this;
+		}
+
+		public SchoolBuilder withAllClassRooms(List<ClassRoom> classRooms) {
+			this.school.classRooms = classRooms;
+			return this;
+		}
+		
+		public School build() {
+			return this.school;
+		}
 	}
 }

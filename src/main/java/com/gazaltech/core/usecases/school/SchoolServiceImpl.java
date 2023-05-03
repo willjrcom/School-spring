@@ -39,10 +39,10 @@ public class SchoolServiceImpl implements SchoolService {
 			return Boolean.FALSE;
 		}
 		
-		return school.getRoomClasses().add(roomClass);
+		return school.getClassRooms().add(roomClass);
 	}
 
 	private Boolean removeRoomClass(School school, ClassRoom roomClass) {
-		return school.getRoomClasses().remove(roomClass);
+		return school.getClassRooms().remove(roomClass);
 	}
 }

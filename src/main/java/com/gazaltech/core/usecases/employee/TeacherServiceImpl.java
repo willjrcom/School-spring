@@ -5,23 +5,11 @@ import com.gazaltech.core.domain.student.Student;
 public class TeacherServiceImpl implements TeacherService {
 
 	@Override
-	public void fixTest() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void fixTask() {
 		// TODO Auto-generated method stub
 		
 	}
-
-	@Override
-	public void sendTest() {
-		// TODO Auto-generated method stub
-		
-	}
-
+	
 	@Override
 	public void sendTask() {
 		// TODO Auto-generated method stub

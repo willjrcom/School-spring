@@ -45,27 +45,27 @@ public class ClassRoom {
 			this.classRoom = new ClassRoom();
 		}
 		
-		public ClassRoomBuilder nameRoom(String nameRoom) {
+		public ClassRoomBuilder withNameRoom(String nameRoom) {
 			classRoom.nameRoom = nameRoom;
 			return this;
 		}
 
-		public ClassRoomBuilder diciplineRoom(DiciplineClassRoom diciplineRoom) {
+		public ClassRoomBuilder withDiciplineRoom(DiciplineClassRoom diciplineRoom) {
 			classRoom.diciplineRoom = diciplineRoom;
 			return this;
 		}
 
-		public ClassRoomBuilder allStudents(List<Student> students) {
+		public ClassRoomBuilder withAllStudents(List<Student> students) {
 			classRoom.students = students;
 			return this;
 		}
 
-		public ClassRoomBuilder student(Student student) {
+		public ClassRoomBuilder withStudent(Student student) {
 			classRoom.students.add(student);
 			return this;
 		}
 		
-		public ClassRoomBuilder teacher(Teacher teacher) {
+		public ClassRoomBuilder withTeacher(Teacher teacher) {
 			classRoom.allTeachers = Arrays.asList(teacher);
 			return this;
 		}
