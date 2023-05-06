@@ -3,12 +3,11 @@ package com.gazaltech.core.usecases.school;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.gazaltech.core.domain.classroom.ClassRoom;
+import com.gazaltech.core.domain.classroom.Classroom;
 import com.gazaltech.core.domain.employee.Employee;
 import com.gazaltech.core.domain.employee.EmployeeTypeEnum;
 import com.gazaltech.core.domain.school.School;
 
-@SuppressWarnings("unused")
 public class SchoolServiceImpl implements SchoolService {
 	@Override
 	public void generateReportCard() {
@@ -22,7 +21,7 @@ public class SchoolServiceImpl implements SchoolService {
 		.collect(Collectors.toList());
 	}
 
-	private Boolean addEmployee(School school, Employee employee) {
+	public Boolean addEmployee(School school, Employee employee) {
 		if (school.getEmployees().size() > 40) {
 			return Boolean.FALSE;
 		}
@@ -30,11 +29,11 @@ public class SchoolServiceImpl implements SchoolService {
 		return school.getEmployees().add(employee);
 	}
 
-	private Boolean removeEmployee(School school, Employee employee) {
+	public Boolean removeEmployee(School school, Employee employee) {
 		return school.getEmployees().remove(employee);
 	}
 
-	private Boolean addRoomClass(School school, ClassRoom roomClass) {
+	public Boolean addRoomClass(School school, Classroom roomClass) {
 		if (school.getEmployees().size() > 40) {
 			return Boolean.FALSE;
 		}
@@ -42,7 +41,7 @@ public class SchoolServiceImpl implements SchoolService {
 		return school.getClassRooms().add(roomClass);
 	}
 
-	private Boolean removeRoomClass(School school, ClassRoom roomClass) {
+	public Boolean removeRoomClass(School school, Classroom roomClass) {
 		return school.getClassRooms().remove(roomClass);
 	}
 }

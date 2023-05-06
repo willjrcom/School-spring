@@ -18,7 +18,16 @@ import lombok.Getter;
 public class Student extends PersonalData {
 	@Min(value = 4)
 	private String ra;
+	private StatusStudentEnum statusStudent;
+	private PunishmentStudentEnum punishmentStudent;
+	
+	public void setStatusStudent(StatusStudentEnum statusStudent) {
+		this.statusStudent = statusStudent;
+	}
 
+	public void setPunishmentStudent(PunishmentStudentEnum punishmentStudent) {
+		this.punishmentStudent = punishmentStudent;
+	}
     public static class StudentBuilder {
 		private Student student;
 		

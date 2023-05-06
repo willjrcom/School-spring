@@ -7,6 +7,8 @@ import java.util.List;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.gazaltech.core.domain.student.Student;
+
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import lombok.Getter;
@@ -20,6 +22,7 @@ public class Task {
 	private Integer totalMinutes;
 	private Integer totalCorrectExercises;
 	private List<Exercise> exercises;
+	private List<Student> studentsToDo;
 
 	@Min(value = 0)
 	@Max(value = 10)

@@ -3,7 +3,7 @@ package com.gazaltech.core.domain.employee;
 import java.math.BigDecimal;
 import java.util.List;
 
-import com.gazaltech.core.domain.classroom.ClassRoom;
+import com.gazaltech.core.domain.classroom.Classroom;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -11,7 +11,7 @@ import lombok.Getter;
 @Getter
 @EqualsAndHashCode(callSuper = false)
 public class Teacher extends Employee {
-	private List<ClassRoom> roomClass;
+	private List<Classroom> roomClass;
 	
 	public Teacher() {
 		this.percentSalary = EmployeeTypeEnum.TEACHER;

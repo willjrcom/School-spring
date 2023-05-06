@@ -1,6 +1,6 @@
 package com.gazaltech.core.domain.classroom;
 
-public enum DiciplineClassRoom {
+public enum DiciplineClassroom {
 	MATH,
 	PORTUGUESE,
 	ENGLISH,

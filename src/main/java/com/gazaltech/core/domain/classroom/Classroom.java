@@ -15,10 +15,10 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @Document(collection = "ClassRoomCollection")
-public class ClassRoom {
+public class Classroom {
 	private ObjectId id;
 	private String nameRoom;
-	private DiciplineClassRoom diciplineRoom;
+	private DiciplineClassroom diciplineRoom;
 	private List<Student> students;
 	private List<Teacher> allTeachers;
 
@@ -29,7 +29,7 @@ public class ClassRoom {
 		return allTeachers.get(this.allTeachers.size() - 1);
 	}
 
-	public String changeNameClassRoom(ClassRoom roomclass, String newName) throws Exception {
+	public String changeNameClassRoom(Classroom roomclass, String newName) throws Exception {
 		if (this.getNameRoom().equals(newName)) {
 			throw new Exception("O novo nome da sala é igual ao nome anterior");
 		}
@@ -39,10 +39,10 @@ public class ClassRoom {
 	}
 	
 	public static class ClassRoomBuilder {
-		private ClassRoom classRoom;
+		private Classroom classRoom;
 		
 		public ClassRoomBuilder() {
-			this.classRoom = new ClassRoom();
+			this.classRoom = new Classroom();
 		}
 		
 		public ClassRoomBuilder withNameRoom(String nameRoom) {
@@ -50,7 +50,7 @@ public class ClassRoom {
 			return this;
 		}
 
-		public ClassRoomBuilder withDiciplineRoom(DiciplineClassRoom diciplineRoom) {
+		public ClassRoomBuilder withDiciplineRoom(DiciplineClassroom diciplineRoom) {
 			classRoom.diciplineRoom = diciplineRoom;
 			return this;
 		}
@@ -70,7 +70,7 @@ public class ClassRoom {
 			return this;
 		}
 		
-		public ClassRoom build(){
+		public Classroom build(){
 			return classRoom;
 		}
 	}

@@ -42,6 +42,11 @@ public abstract class Employee extends PersonalData {
 	        this.employee = getInstanceByClass(classInstance);
 		    this.employee.percentSalary = EmployeeTypeEnum.getEmployeeByClass(this.employee.getClass());
 		}
+
+		public EmployeeBuilder(T employee)  {
+	        this.employee = employee;
+		    this.employee.percentSalary = EmployeeTypeEnum.getEmployeeByClass(this.employee.getClass());
+		}
 		
 		public EmployeeBuilder<T> withName(String name) {
 			this.employee.name = name;
