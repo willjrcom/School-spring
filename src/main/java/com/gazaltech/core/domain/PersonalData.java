@@ -2,6 +2,7 @@ package com.gazaltech.core.domain;
 
 import org.bson.BsonDateTime;
 import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
 import org.springframework.validation.annotation.Validated;
 
 import com.gazaltech.shared.domain.Cpf;
@@ -13,6 +14,7 @@ import lombok.Getter;
 @Getter
 @Validated
 public class PersonalData {
+	@Id
 	private ObjectId id;
 	protected Cpf cpf;
 	

@@ -2,15 +2,25 @@ package com.gazaltech.core.domain.school;
 
 import java.util.List;
 
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+
 import com.gazaltech.core.domain.address.Address;
 import com.gazaltech.core.domain.classroom.Classroom;
 import com.gazaltech.core.domain.employee.Employee;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 
 @Getter
 public class School {
+	@Id
+	private ObjectId id;
+	
+	@NotBlank
 	private String name;
+	
+	@NotBlank
 	private Address address;
 	private List<Employee> employees;
 	private List<Classroom> classRooms;

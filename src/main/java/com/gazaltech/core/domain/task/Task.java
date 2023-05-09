@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.gazaltech.core.domain.student.Student;
@@ -16,6 +17,7 @@ import lombok.Getter;
 @Getter
 @Document(collection = "TestCollection")
 public class Task {
+	@Id
 	private ObjectId id;
 	private Date startDate;
 	private Date finishDate;

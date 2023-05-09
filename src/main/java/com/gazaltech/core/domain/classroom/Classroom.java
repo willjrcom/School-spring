@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.gazaltech.core.domain.employee.Teacher;
@@ -16,8 +17,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Document(collection = "ClassRoomCollection")
 public class Classroom {
+	@Id
 	private ObjectId id;
-	private String nameRoom;
+	private String nameroom;
 	private DiciplineClassroom diciplineRoom;
 	private List<Student> students;
 	private List<Teacher> allTeachers;
@@ -30,12 +32,12 @@ public class Classroom {
 	}
 
 	public String changeNameClassRoom(Classroom roomclass, String newName) throws Exception {
-		if (this.getNameRoom().equals(newName)) {
+		if (this.getNameroom().equals(newName)) {
 			throw new Exception("O novo nome da sala é igual ao nome anterior");
 		}
 		
-		this.nameRoom = newName;
-		return getNameRoom();
+		this.nameroom = newName;
+		return getNameroom();
 	}
 	
 	public static class ClassRoomBuilder {
@@ -46,7 +48,7 @@ public class Classroom {
 		}
 		
 		public ClassRoomBuilder withNameRoom(String nameRoom) {
-			classRoom.nameRoom = nameRoom;
+			classRoom.nameroom = nameRoom;
 			return this;
 		}
 
