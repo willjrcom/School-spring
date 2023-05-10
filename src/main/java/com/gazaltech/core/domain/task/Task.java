@@ -8,8 +8,6 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import com.gazaltech.core.domain.student.Student;
-
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import lombok.Getter;
@@ -19,14 +17,29 @@ import lombok.Getter;
 public class Task {
 	@Id
 	private ObjectId id;
+	private String name;
 	private Date startDate;
 	private Date finishDate;
 	private Integer totalMinutes;
 	private Integer totalCorrectExercises;
 	private List<Exercise> exercises;
-	private List<Student> studentsToDo;
+	private StatusTask statusTask;
 
 	@Min(value = 0)
 	@Max(value = 10)
 	private BigDecimal note;
+	
+	public void setStatusTaskOpen() {
+		if (!this.statusTask.equals(StatusTask.READY)) {
+			return;
+		}
+		this.statusTask = StatusTask.OPEN;
+	}
+
+	public void setStatusTaskClosed() {
+		if (!this.statusTask.equals(StatusTask.OPEN)) {
+			return;
+		}
+		this.statusTask = StatusTask.CLOSED;
+	}
 }

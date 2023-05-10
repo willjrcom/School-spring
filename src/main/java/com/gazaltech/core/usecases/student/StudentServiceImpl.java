@@ -4,8 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.gazaltech.core.domain.student.Student;
-import com.gazaltech.core.domain.task.Task;
-import com.gazaltech.core.infra.repositorys.StudentRepositoryMongo;
+import com.gazaltech.core.infra.gateway.StudentGateway;
 import com.gazaltech.shared.domain.Cpf;
 
 import reactor.core.publisher.Flux;
@@ -14,37 +13,25 @@ import reactor.core.publisher.Mono;
 @Service
 public class StudentServiceImpl implements StudentService {
 	@Autowired
-	private StudentRepositoryMongo studentRepository;
-
-	@Override
-	public void StartTask(Task task) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void finishTask(Task task) {
-		// TODO Auto-generated method stub
-		
-	}
+	private StudentGateway studentGateway;
 	
 	public Mono<Student> findByCpf(Cpf cpf) {
-		return studentRepository.findByCpf(cpf);
+		return studentGateway.findByCpf(cpf);
 	}
 
 	public Mono<Student> findByEmail(String email) {
-		return studentRepository.findByEmail(email);
+		return studentGateway.findByEmail(email);
 	}
 	
 	public Mono<Student> findByRa(long ra) {
-		return studentRepository.findByRa(ra);
+		return studentGateway.findByRa(ra);
 	}
 
 	public Flux<Student> findAll() {
-		return studentRepository.findAll();
+		return studentGateway.findAll();
 	}
 	
 	public Mono<Student> save(Student student) {
-		return studentRepository.save(student);
+		return studentGateway.save(student);
 	}
 }

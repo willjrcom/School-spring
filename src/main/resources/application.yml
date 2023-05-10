@@ -5,6 +5,9 @@ spring:
       database: devDB
       authentication-database: devDB
       
+  profiles:
+    active: PROD
+    
   mvc:
     pathmatch:
       matching-strategy: ant-path-matcher

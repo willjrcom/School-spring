@@ -1,10 +1,13 @@
 package com.gazaltech.core.domain.student;
 
+import java.util.List;
+
 import org.bson.BsonDateTime;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.validation.annotation.Validated;
 
 import com.gazaltech.core.domain.PersonalData;
+import com.gazaltech.core.domain.task.Task;
 import com.gazaltech.shared.domain.Cpf;
 
 import jakarta.validation.constraints.Min;
@@ -20,6 +23,7 @@ public class Student extends PersonalData {
 	private String ra;
 	private StatusStudentEnum statusStudent;
 	private PunishmentStudentEnum punishmentStudent;
+	private List<Task> tasksToDo;
 	
 	public void setStatusStudent(StatusStudentEnum statusStudent) {
 		this.statusStudent = statusStudent;
@@ -28,6 +32,7 @@ public class Student extends PersonalData {
 	public void setPunishmentStudent(PunishmentStudentEnum punishmentStudent) {
 		this.punishmentStudent = punishmentStudent;
 	}
+	
     public static class StudentBuilder {
 		private Student student;
 		
